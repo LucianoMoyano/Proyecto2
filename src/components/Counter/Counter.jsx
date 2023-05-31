@@ -38,7 +38,13 @@ export const Counter = () => {
 
   const [counter, setCounter] = useState(0);
 
+  const [max, setMax] = useState(10); //de esta forma el valor maximo de produtos son 10 y nos muestra el alerta de "Sin stock"
+
   const handleAdd = () => {
+    if (counter == max) {
+      alert("Sin stock");
+      counter(0);
+    }
     setCounter(counter + 1);
   };
 
