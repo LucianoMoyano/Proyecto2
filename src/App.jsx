@@ -1,5 +1,6 @@
 import "./App.css";
-import { MiSegundoComponente } from "./components/MiSegundoComponente/MiSegundoComponente";
+import { Counter } from "./components/Counter/Counter";
+/* import { MiSegundoComponente } from "./components/MiSegundoComponente/MiSegundoComponente"; */
 
 function App() {
   //Ejemplo 2
@@ -18,12 +19,12 @@ function App() {
 
   //Ejemplos con Desestructuración de datos 3
 
-  const person = {
+  /*   const person = {
     name: "Goku",
     age: 27,
   };
 
-  const saludo = "Hola";
+  const saludo = "Hola"; */
 
   return (
     <>
@@ -41,7 +42,8 @@ function App() {
       {/* Ejemplos con Desestructuración de datos 2 
       <MiSegundoComponente {...propsObjeto} />*/}
       {/* Ejemplos con Desestructuración de datos 3 */}
-      <MiSegundoComponente person={person} saludo={saludo} />
+      {/*  <MiSegundoComponente person={person} saludo={saludo} /> */}
+      <Counter />
     </>
   );
 }
