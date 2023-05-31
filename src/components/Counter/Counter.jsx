@@ -1,4 +1,6 @@
 import react, { useState } from "react";
+import { BsFillCartPlusFill } from "react-icons/bs";
+import { BsFillCartDashFill } from "react-icons/bs";
 
 export const Counter = () => {
   //ejemplo 1
@@ -32,6 +34,20 @@ export const Counter = () => {
     setIsWhite(false);
   };
 
+  //Counter
+
+  const [counter, setCounter] = useState(0);
+
+  const handleAdd = () => {
+    setCounter(counter + 1);
+  };
+
+  const handleRemove = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  };
+
   return (
     <>
       <h3>Mis estados</h3>
@@ -52,6 +68,15 @@ export const Counter = () => {
         <button onClick={handleWhite}>Blanco</button>
         <button onClick={handleBlack}>Negro</button>
       </div>
+      <hr />
+
+      <h3>{counter}</h3>
+      <button onClick={handleAdd}>
+        <BsFillCartPlusFill />
+      </button>
+      <button onClick={handleRemove}>
+        <BsFillCartDashFill />
+      </button>
     </>
   );
 };
