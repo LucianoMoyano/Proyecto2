@@ -29,11 +29,14 @@ export const ProductList = () => {
       ) : (
         <div className="card">
           {items.map((item) => (
-            <h4 key={item.id}>
-              <img src={item.photo} alt={item.photo} />
-              <p>{item.name}</p>
-              <p>{item.description}</p>
-            </h4>
+            <div className="subCard">
+              <h4 key={item.id}>
+                <img src={item.photo} alt={item.photo} />
+                <p>{item.name}</p>
+                <p>{item.description}</p>
+                <button className="btn btn-success">Comprar</button>
+              </h4>
+            </div>
           ))}
         </div>
       )}

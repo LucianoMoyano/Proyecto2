@@ -9,3 +9,9 @@
 .card h4 {
   margin: 5px;
 }
+
+.subCard h4 {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 4px;
+}
