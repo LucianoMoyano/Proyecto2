@@ -23,7 +23,7 @@ export const ProductList = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {loading ? (
         <p>Cargando..</p>
       ) : (
@@ -40,6 +40,6 @@ export const ProductList = () => {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 };
